@@ -65,7 +65,7 @@
 \usepackage{titling}
 
 % Create subtitle command for use in maketitle
-\newcommand{\subtitle}[1]{
+\providecommand{\subtitle}[1]{
   \posttitle{
     \begin{center}\large#1\end{center}
     }
@@ -92,9 +92,9 @@
 
 \begin{document}
 
-\section{Complex forest structure interacts with climatic water deficit
-to drive forest insect disturbance severity in a recent hot
-drought}\label{complex-forest-structure-interacts-with-climatic-water-deficit-to-drive-forest-insect-disturbance-severity-in-a-recent-hot-drought}
+\section{Differential response of a tree-killing bark beetle to host
+tree size across a gradient of climatic water
+deficit}\label{differential-response-of-a-tree-killing-bark-beetle-to-host-tree-size-across-a-gradient-of-climatic-water-deficit}
 
 Michael J. Koontz\textsuperscript{1,2,*}, Andrew M.
 Latimer\textsuperscript{1,2}, Leif A. Mortenson\textsuperscript{3},
@@ -112,7 +112,7 @@ Station, Davis, CA, USA
 
 \textsuperscript{*}Correspondence: \texttt{michael.koontz@colorado.edu}
 
-Date report generated: April 14, 2019
+Date report generated: April 23, 2019
 
 \subsection{Abstract}\label{abstract}
 
@@ -121,27 +121,28 @@ conditions for unprecedented ponderosa pine mortality in the driest,
 densest portions of the Sierra Nevada mountain range, largely caused by
 the western pine beetle (\emph{Dendroctonus brevicomis}). Climate
 conditions related to tree water stress as well as forest structure can
-both influence the severity of forest insect disturbance, but it remains
+influence the severity of forest insect disturbance, but it remains
 challenging to consider how these variables may interact to produce
 patterns of tree mortality. Previous studies have shown an interaction
 between climate conditions and forest density in their effect on tree
-mortality, but forest density is a coarse gauge of forest structure that
-can affect western pine beetle behavior in a number of ways. Measuring
+mortality, but density is a coarse gauge of forest structure that can
+affect western pine beetle behavior in a number of ways. Measuring
 broad-scale climate conditions simultaneously with complex forest
 structure-- including tree species, tree size, and local density-- will
 refine our understanding of how these variables interact, but is
 generally expensive and/or labor-intensive. We overcame these hurdles by
-using a small, unhumanned aerial system to conduct aerial surveys over
-an established network of 32 forest plots along a 350km and 1000m
-elevation gradient in western slope Sierra yellow pine/mixed-conifer
-forests. Using Structure from Motion (SfM) processing on over 450,000
-images and field measurements from the coincident ground plots, we
-determined tree size, location, and species for individual trees over 9
-square kilometers of forest that experienced ponderosa pine mortality as
-a result of western pine beetle activity. We modeled the probability of
-ponderosa pine mortality as a linear combination of forest structure
-variables and site-level climatic water deficit, and used a Gaussian
-process to estimate the spatial covariance in the response.
+using a small, unhumanned aerial system (hereafter `drone') to conduct
+aerial surveys over an established network of 32 forest plots along a
+350km and 1000m elevation gradient in western slope Sierra yellow
+pine/mixed-conifer forests. Using Structure from Motion (SfM) processing
+on over 450,000 images and field measurements from the coincident ground
+plots, we determined tree size, location, and species for individual
+trees over 9 square kilometers of forest that experienced ponderosa pine
+mortality as a result of western pine beetle activity. We modeled the
+probability of ponderosa pine mortality as a linear combination of
+forest structure variables and site-level climatic water deficit, and
+used a Gaussian process to estimate the spatial covariance in the
+response.
 
 We found that greater host density strongly increased the probability of
 host mortality, and greater host size generally decreased the
@@ -182,13 +183,13 @@ al. 2010), while the link to forest density is multifaceted (Fettig
 2012). Because forest density is a coarse metric of the complex forest
 structure to which bark beetles respond (Raffa et al. 2008), our
 understanding of the connection between forest density and insect
-disturbance severity may be enhanced with more finely-resolved measures
-of forest structure, such as tree size, tree species, and local density
-within a forest stand (Stephenson et al. 2019, Fettig et al. 2019).
-Further, the interaction between local-scale complex forest structure
-and broad-scale environmental conditions as they affect forest insect
-disturbance remains underexplored (Seidl et al. 2016, Stephenson et al.
-2019, Fettig et al. 2019).
+disturbance severity could be enhanced with more finely-resolved
+measures of forest structure, such as tree size, tree species, and local
+density within a forest stand (Stephenson et al. 2019, Fettig et al.
+2019). Further, the interaction between local-scale complex forest
+structure and broad-scale environmental conditions as they affect forest
+insect disturbance remains underexplored (Seidl et al. 2016, Stephenson
+et al. 2019, Fettig et al. 2019).
 
 The yellow pine/mixed-conifer forests in California's Sierra Nevada
 region are characterized by regular bark beetle disturbances, primarily
@@ -210,7 +211,7 @@ water stress, trees no longer have the resources available to mount this
 defense (Kolb et al. 2016) and thus prolonged drought can often trigger
 increased bark beetle-induced tree mortality as average tree vigor
 declines (Bentz et al. 2010). As local beetle density increases due to
-successful reproduction on spatially aggregated weakened trees, as might
+successful reproduction on spatially-aggregated weakened trees, as might
 occur in a prolonged drought, mass attacks become capable of
 overwhelming any tree's defenses and even healthy trees become
 susceptible (Bentz et al. 2010, Raffa et al. 2015). Thus, water stress
@@ -225,30 +226,30 @@ size, and species composition of trees-- also strongly influences
 western pine beetle activity. For instance, high-density forests are
 more prone to bark beetle attacks, and several mechanism likely underlie
 this phenomenon (Fettig 2012). A high-density forest may experience
-greater bark beetle-induced tree mortality because host availability is
-high and shorter dispersal distances facilitate successful colonization
-of those hosts (Miller and Keen 1960, Berryman 1982, Fettig et al.
-2007), because high host availability reduces the chance of individual
-beetles wasting their limited resources flying to and landing on a
-non-host tree (Moeck et al. 1981, Evenden et al. 2014), because crowded
-trees experience greater competition for water resources and thus
-average tree resistance is lower (Hayes et al. 2009), or because smaller
-gaps between trees protect pheromone plumes from dissipation by the wind
-and thus enhance intraspecific beetle communication (Thistle et al.
-2004). Additionally, tree size affects bark beetle host selection
-behavior as smaller trees tend to have less capacity for resisting
-attack, but larger trees represent a more desirable target because their
-thicker phloem provides greater nutritional value (Chubaty et al. 2009,
-Graf et al. 2012). Tree density thus paints a fundamentally limited
-picture of the mechanism by which forest structure affects bark beetle
-disturbance, but \emph{complex} forest structure-- with explicit
-recognition of tree size, species composition (e.g., host versus
-non-host composition), and local tree density-- should more
-appropriately capture the ecological processes underlying insect-induced
-tree mortality. Additionally, considering the effects of complex forest
-structure simultaneously to the effects of environmental conditions may
-help refine our understanding of observed patterns of tree mortality in
-the recent California hot drought.
+greater bark beetle-induced tree mortality for several reasons
+including: a) host availability is high and shorter dispersal distances
+facilitate successful colonization of those hosts (Miller and Keen 1960,
+Berryman 1982, Fettig et al. 2007); b) high host availability reduces
+the chance of individual beetles wasting their limited resources flying
+to and landing on a non-host tree (Moeck et al. 1981, Evenden et al.
+2014); c) crowded trees experience greater competition for water
+resources and thus average tree resistance is lower (Hayes et al. 2009);
+or d) smaller gaps between trees protect pheromone plumes from
+dissipation by the wind and thus enhance intraspecific beetle
+communication (Thistle et al. 2004). Additionally, tree size affects
+bark beetle host selection behavior as smaller trees tend to have less
+capacity for resisting attack, but larger trees represent a more
+desirable target because their thicker phloem provides greater
+nutritional value (Chubaty et al. 2009, Graf et al. 2012). Tree density
+thus paints a fundamentally limited picture of the mechanism by which
+forest structure affects bark beetle disturbance, but \emph{complex}
+forest structure-- with explicit recognition of tree size, species
+composition (e.g., host versus non-host composition), and local tree
+density-- should more appropriately capture the ecological processes
+underlying insect-induced tree mortality. Additionally, considering the
+effects of complex forest structure simultaneously to the effects of
+environmental conditions may help refine our understanding of observed
+patterns of tree mortality in the recent California hot drought.
 
 The vast spatial extent of tree mortality in the 2012 to 2015 California
 hot drought (USDAFS 2019) challenges our ability to simultaneously
@@ -267,13 +268,13 @@ environmental gradient is a viable approach to overcoming the data
 acquisition challenge inherent in investigating phenomena with both a
 strong local- and a strong broad-scale component.
 
-We used ultra-high resolution remote sensing data from a small,
-unhumanned aerial system over a network of 32 sites in Sierra Nevada
-yellow pine/mixed-conifer forests spanning 1000m of elevation and 350km
-of latitude and covering a total of 9 square kilometers to ask how
-broad-scale environmental conditions interacted with local, complex
-forest structure to affect the probability of tree mortality during the
-cumulative tree mortality event of 2012 to 2018. We asked:
+We used ultra-high resolution, drone-derived remote sensing data over a
+network of 32 sites in Sierra Nevada yellow pine/mixed-conifer forests
+spanning 1000m of elevation and 350km of latitude and covering a total
+of 9 square kilometers to ask how broad-scale environmental conditions
+interacted with local, complex forest structure to affect the
+probability of tree mortality during the cumulative tree mortality event
+of 2012 to 2018. We asked:
 
 \begin{enumerate}
 \def\labelenumi{\arabic{enumi}.}
@@ -992,452 +993,452 @@ site is presented along with the mortality and density calculated from
 the ground data (aerial / ground). The density is measured in trees per
 hectare (tpha).}\tabularnewline
 \toprule
-\begin{minipage}[b]{0.12\columnwidth}\centering\strut
+\begin{minipage}[b]{0.11\columnwidth}\centering\strut
 Site\strut
 \end{minipage} & \begin{minipage}[b]{0.07\columnwidth}\centering\strut
 CWD (mm)\strut
-\end{minipage} & \begin{minipage}[b]{0.12\columnwidth}\centering\strut
+\end{minipage} & \begin{minipage}[b]{0.11\columnwidth}\centering\strut
 CWD (z-score)\strut
-\end{minipage} & \begin{minipage}[b]{0.14\columnwidth}\centering\strut
+\end{minipage} & \begin{minipage}[b]{0.13\columnwidth}\centering\strut
 Survey area (ha)\strut
-\end{minipage} & \begin{minipage}[b]{0.17\columnwidth}\centering\strut
-Mortality (aerial/ground)\strut
+\end{minipage} & \begin{minipage}[b]{0.18\columnwidth}\centering\strut
+\% tree mortality (aerial/ground)\strut
 \end{minipage} & \begin{minipage}[b]{0.22\columnwidth}\centering\strut
 Density (tpha; aerial/ground)\strut
 \end{minipage}\tabularnewline
 \midrule
 \endfirsthead
 \toprule
-\begin{minipage}[b]{0.12\columnwidth}\centering\strut
+\begin{minipage}[b]{0.11\columnwidth}\centering\strut
 Site\strut
 \end{minipage} & \begin{minipage}[b]{0.07\columnwidth}\centering\strut
 CWD (mm)\strut
-\end{minipage} & \begin{minipage}[b]{0.12\columnwidth}\centering\strut
+\end{minipage} & \begin{minipage}[b]{0.11\columnwidth}\centering\strut
 CWD (z-score)\strut
-\end{minipage} & \begin{minipage}[b]{0.14\columnwidth}\centering\strut
+\end{minipage} & \begin{minipage}[b]{0.13\columnwidth}\centering\strut
 Survey area (ha)\strut
-\end{minipage} & \begin{minipage}[b]{0.17\columnwidth}\centering\strut
-Mortality (aerial/ground)\strut
+\end{minipage} & \begin{minipage}[b]{0.18\columnwidth}\centering\strut
+\% tree mortality (aerial/ground)\strut
 \end{minipage} & \begin{minipage}[b]{0.22\columnwidth}\centering\strut
 Density (tpha; aerial/ground)\strut
 \end{minipage}\tabularnewline
 \midrule
 \endhead
-\begin{minipage}[t]{0.12\columnwidth}\centering\strut
+\begin{minipage}[t]{0.11\columnwidth}\centering\strut
 eldo\_3k\_1\strut
 \end{minipage} & \begin{minipage}[t]{0.07\columnwidth}\centering\strut
 678\strut
-\end{minipage} & \begin{minipage}[t]{0.12\columnwidth}\centering\strut
+\end{minipage} & \begin{minipage}[t]{0.11\columnwidth}\centering\strut
 0.319\strut
-\end{minipage} & \begin{minipage}[t]{0.14\columnwidth}\centering\strut
+\end{minipage} & \begin{minipage}[t]{0.13\columnwidth}\centering\strut
 31.02\strut
-\end{minipage} & \begin{minipage}[t]{0.17\columnwidth}\centering\strut
-0.11/0.61\strut
+\end{minipage} & \begin{minipage}[t]{0.18\columnwidth}\centering\strut
+11/61\strut
 \end{minipage} & \begin{minipage}[t]{0.22\columnwidth}\centering\strut
-630.01/410.19\strut
+630/410\strut
 \end{minipage}\tabularnewline
-\begin{minipage}[t]{0.12\columnwidth}\centering\strut
+\begin{minipage}[t]{0.11\columnwidth}\centering\strut
 eldo\_3k\_2\strut
 \end{minipage} & \begin{minipage}[t]{0.07\columnwidth}\centering\strut
 706\strut
-\end{minipage} & \begin{minipage}[t]{0.12\columnwidth}\centering\strut
+\end{minipage} & \begin{minipage}[t]{0.11\columnwidth}\centering\strut
 0.501\strut
-\end{minipage} & \begin{minipage}[t]{0.14\columnwidth}\centering\strut
+\end{minipage} & \begin{minipage}[t]{0.13\columnwidth}\centering\strut
 30.61\strut
-\end{minipage} & \begin{minipage}[t]{0.17\columnwidth}\centering\strut
-0.12/0.36\strut
+\end{minipage} & \begin{minipage}[t]{0.18\columnwidth}\centering\strut
+12/36\strut
 \end{minipage} & \begin{minipage}[t]{0.22\columnwidth}\centering\strut
-444.26/647.42\strut
+444/647\strut
 \end{minipage}\tabularnewline
-\begin{minipage}[t]{0.12\columnwidth}\centering\strut
+\begin{minipage}[t]{0.11\columnwidth}\centering\strut
 eldo\_3k\_3\strut
 \end{minipage} & \begin{minipage}[t]{0.07\columnwidth}\centering\strut
 655\strut
-\end{minipage} & \begin{minipage}[t]{0.12\columnwidth}\centering\strut
+\end{minipage} & \begin{minipage}[t]{0.11\columnwidth}\centering\strut
 0.163\strut
-\end{minipage} & \begin{minipage}[t]{0.14\columnwidth}\centering\strut
+\end{minipage} & \begin{minipage}[t]{0.13\columnwidth}\centering\strut
 30.95\strut
-\end{minipage} & \begin{minipage}[t]{0.17\columnwidth}\centering\strut
-0.22/0.36\strut
+\end{minipage} & \begin{minipage}[t]{0.18\columnwidth}\centering\strut
+22/36\strut
 \end{minipage} & \begin{minipage}[t]{0.22\columnwidth}\centering\strut
-492.63/410.19\strut
+493/410\strut
 \end{minipage}\tabularnewline
-\begin{minipage}[t]{0.12\columnwidth}\centering\strut
+\begin{minipage}[t]{0.11\columnwidth}\centering\strut
 eldo\_4k\_1\strut
 \end{minipage} & \begin{minipage}[t]{0.07\columnwidth}\centering\strut
 570\strut
-\end{minipage} & \begin{minipage}[t]{0.12\columnwidth}\centering\strut
+\end{minipage} & \begin{minipage}[t]{0.11\columnwidth}\centering\strut
 -0.383\strut
-\end{minipage} & \begin{minipage}[t]{0.14\columnwidth}\centering\strut
+\end{minipage} & \begin{minipage}[t]{0.13\columnwidth}\centering\strut
 28.04\strut
-\end{minipage} & \begin{minipage}[t]{0.17\columnwidth}\centering\strut
-0.09/0.39\strut
+\end{minipage} & \begin{minipage}[t]{0.18\columnwidth}\centering\strut
+9/39\strut
 \end{minipage} & \begin{minipage}[t]{0.22\columnwidth}\centering\strut
-632.82/588.11\strut
+633/588\strut
 \end{minipage}\tabularnewline
-\begin{minipage}[t]{0.12\columnwidth}\centering\strut
+\begin{minipage}[t]{0.11\columnwidth}\centering\strut
 eldo\_4k\_2\strut
 \end{minipage} & \begin{minipage}[t]{0.07\columnwidth}\centering\strut
 642\strut
-\end{minipage} & \begin{minipage}[t]{0.12\columnwidth}\centering\strut
+\end{minipage} & \begin{minipage}[t]{0.11\columnwidth}\centering\strut
 0.0831\strut
-\end{minipage} & \begin{minipage}[t]{0.14\columnwidth}\centering\strut
+\end{minipage} & \begin{minipage}[t]{0.13\columnwidth}\centering\strut
 28.41\strut
-\end{minipage} & \begin{minipage}[t]{0.17\columnwidth}\centering\strut
-0.15/0.78\strut
+\end{minipage} & \begin{minipage}[t]{0.18\columnwidth}\centering\strut
+15/78\strut
 \end{minipage} & \begin{minipage}[t]{0.22\columnwidth}\centering\strut
-338.20/271.82\strut
+338/272\strut
 \end{minipage}\tabularnewline
-\begin{minipage}[t]{0.12\columnwidth}\centering\strut
+\begin{minipage}[t]{0.11\columnwidth}\centering\strut
 eldo\_5k\_1\strut
 \end{minipage} & \begin{minipage}[t]{0.07\columnwidth}\centering\strut
 663\strut
-\end{minipage} & \begin{minipage}[t]{0.12\columnwidth}\centering\strut
+\end{minipage} & \begin{minipage}[t]{0.11\columnwidth}\centering\strut
 0.219\strut
-\end{minipage} & \begin{minipage}[t]{0.14\columnwidth}\centering\strut
+\end{minipage} & \begin{minipage}[t]{0.13\columnwidth}\centering\strut
 28.44\strut
-\end{minipage} & \begin{minipage}[t]{0.17\columnwidth}\centering\strut
-0.11/0.44\strut
+\end{minipage} & \begin{minipage}[t]{0.18\columnwidth}\centering\strut
+11/44\strut
 \end{minipage} & \begin{minipage}[t]{0.22\columnwidth}\centering\strut
-661.80/543.63\strut
+662/544\strut
 \end{minipage}\tabularnewline
-\begin{minipage}[t]{0.12\columnwidth}\centering\strut
+\begin{minipage}[t]{0.11\columnwidth}\centering\strut
 eldo\_5k\_2\strut
 \end{minipage} & \begin{minipage}[t]{0.07\columnwidth}\centering\strut
 627\strut
-\end{minipage} & \begin{minipage}[t]{0.12\columnwidth}\centering\strut
+\end{minipage} & \begin{minipage}[t]{0.11\columnwidth}\centering\strut
 -0.0132\strut
-\end{minipage} & \begin{minipage}[t]{0.14\columnwidth}\centering\strut
+\end{minipage} & \begin{minipage}[t]{0.13\columnwidth}\centering\strut
 30.02\strut
-\end{minipage} & \begin{minipage}[t]{0.17\columnwidth}\centering\strut
-0.12/0.36\strut
+\end{minipage} & \begin{minipage}[t]{0.18\columnwidth}\centering\strut
+12/36\strut
 \end{minipage} & \begin{minipage}[t]{0.22\columnwidth}\centering\strut
-584.89/968.65\strut
+585/969\strut
 \end{minipage}\tabularnewline
-\begin{minipage}[t]{0.12\columnwidth}\centering\strut
+\begin{minipage}[t]{0.11\columnwidth}\centering\strut
 eldo\_5k\_3\strut
 \end{minipage} & \begin{minipage}[t]{0.07\columnwidth}\centering\strut
 599\strut
-\end{minipage} & \begin{minipage}[t]{0.12\columnwidth}\centering\strut
+\end{minipage} & \begin{minipage}[t]{0.11\columnwidth}\centering\strut
 -0.2\strut
-\end{minipage} & \begin{minipage}[t]{0.14\columnwidth}\centering\strut
+\end{minipage} & \begin{minipage}[t]{0.13\columnwidth}\centering\strut
 29.73\strut
-\end{minipage} & \begin{minipage}[t]{0.17\columnwidth}\centering\strut
-0.07/0.32\strut
+\end{minipage} & \begin{minipage}[t]{0.18\columnwidth}\centering\strut
+7/32\strut
 \end{minipage} & \begin{minipage}[t]{0.22\columnwidth}\centering\strut
-488.66/622.71\strut
+489/623\strut
 \end{minipage}\tabularnewline
-\begin{minipage}[t]{0.12\columnwidth}\centering\strut
+\begin{minipage}[t]{0.11\columnwidth}\centering\strut
 stan\_3k\_1\strut
 \end{minipage} & \begin{minipage}[t]{0.07\columnwidth}\centering\strut
 638\strut
-\end{minipage} & \begin{minipage}[t]{0.12\columnwidth}\centering\strut
+\end{minipage} & \begin{minipage}[t]{0.11\columnwidth}\centering\strut
 0.059\strut
-\end{minipage} & \begin{minipage}[t]{0.14\columnwidth}\centering\strut
+\end{minipage} & \begin{minipage}[t]{0.13\columnwidth}\centering\strut
 31.04\strut
-\end{minipage} & \begin{minipage}[t]{0.17\columnwidth}\centering\strut
-0.10/0.52\strut
+\end{minipage} & \begin{minipage}[t]{0.18\columnwidth}\centering\strut
+10/52\strut
 \end{minipage} & \begin{minipage}[t]{0.22\columnwidth}\centering\strut
-739.45/1037.84\strut
+739/1038\strut
 \end{minipage}\tabularnewline
-\begin{minipage}[t]{0.12\columnwidth}\centering\strut
+\begin{minipage}[t]{0.11\columnwidth}\centering\strut
 stan\_3k\_2\strut
 \end{minipage} & \begin{minipage}[t]{0.07\columnwidth}\centering\strut
 739\strut
-\end{minipage} & \begin{minipage}[t]{0.12\columnwidth}\centering\strut
+\end{minipage} & \begin{minipage}[t]{0.11\columnwidth}\centering\strut
 0.713\strut
-\end{minipage} & \begin{minipage}[t]{0.14\columnwidth}\centering\strut
+\end{minipage} & \begin{minipage}[t]{0.13\columnwidth}\centering\strut
 18.78\strut
-\end{minipage} & \begin{minipage}[t]{0.17\columnwidth}\centering\strut
-0.40/0.78\strut
+\end{minipage} & \begin{minipage}[t]{0.18\columnwidth}\centering\strut
+40/78\strut
 \end{minipage} & \begin{minipage}[t]{0.22\columnwidth}\centering\strut
-433.53/405.25\strut
+434/405\strut
 \end{minipage}\tabularnewline
-\begin{minipage}[t]{0.12\columnwidth}\centering\strut
+\begin{minipage}[t]{0.11\columnwidth}\centering\strut
 stan\_3k\_3\strut
 \end{minipage} & \begin{minipage}[t]{0.07\columnwidth}\centering\strut
 762\strut
-\end{minipage} & \begin{minipage}[t]{0.12\columnwidth}\centering\strut
+\end{minipage} & \begin{minipage}[t]{0.11\columnwidth}\centering\strut
 0.859\strut
-\end{minipage} & \begin{minipage}[t]{0.14\columnwidth}\centering\strut
+\end{minipage} & \begin{minipage}[t]{0.13\columnwidth}\centering\strut
 30.1\strut
-\end{minipage} & \begin{minipage}[t]{0.17\columnwidth}\centering\strut
-0.22/0.41\strut
+\end{minipage} & \begin{minipage}[t]{0.18\columnwidth}\centering\strut
+22/41\strut
 \end{minipage} & \begin{minipage}[t]{0.22\columnwidth}\centering\strut
-558.43/326.18\strut
+558/326\strut
 \end{minipage}\tabularnewline
-\begin{minipage}[t]{0.12\columnwidth}\centering\strut
+\begin{minipage}[t]{0.11\columnwidth}\centering\strut
 stan\_4k\_1\strut
 \end{minipage} & \begin{minipage}[t]{0.07\columnwidth}\centering\strut
 540\strut
-\end{minipage} & \begin{minipage}[t]{0.12\columnwidth}\centering\strut
+\end{minipage} & \begin{minipage}[t]{0.11\columnwidth}\centering\strut
 -0.58\strut
-\end{minipage} & \begin{minipage}[t]{0.14\columnwidth}\centering\strut
+\end{minipage} & \begin{minipage}[t]{0.13\columnwidth}\centering\strut
 29.62\strut
-\end{minipage} & \begin{minipage}[t]{0.17\columnwidth}\centering\strut
-0.29/0.63\strut
+\end{minipage} & \begin{minipage}[t]{0.18\columnwidth}\centering\strut
+29/63\strut
 \end{minipage} & \begin{minipage}[t]{0.22\columnwidth}\centering\strut
-507.61/711.66\strut
+508/712\strut
 \end{minipage}\tabularnewline
-\begin{minipage}[t]{0.12\columnwidth}\centering\strut
+\begin{minipage}[t]{0.11\columnwidth}\centering\strut
 stan\_4k\_2\strut
 \end{minipage} & \begin{minipage}[t]{0.07\columnwidth}\centering\strut
 528\strut
-\end{minipage} & \begin{minipage}[t]{0.12\columnwidth}\centering\strut
+\end{minipage} & \begin{minipage}[t]{0.11\columnwidth}\centering\strut
 -0.658\strut
-\end{minipage} & \begin{minipage}[t]{0.14\columnwidth}\centering\strut
+\end{minipage} & \begin{minipage}[t]{0.13\columnwidth}\centering\strut
 30.54\strut
-\end{minipage} & \begin{minipage}[t]{0.17\columnwidth}\centering\strut
-0.18/0.56\strut
+\end{minipage} & \begin{minipage}[t]{0.18\columnwidth}\centering\strut
+18/56\strut
 \end{minipage} & \begin{minipage}[t]{0.22\columnwidth}\centering\strut
-481.85/256.99\strut
+482/257\strut
 \end{minipage}\tabularnewline
-\begin{minipage}[t]{0.12\columnwidth}\centering\strut
+\begin{minipage}[t]{0.11\columnwidth}\centering\strut
 stan\_5k\_1\strut
 \end{minipage} & \begin{minipage}[t]{0.07\columnwidth}\centering\strut
 524\strut
-\end{minipage} & \begin{minipage}[t]{0.12\columnwidth}\centering\strut
+\end{minipage} & \begin{minipage}[t]{0.11\columnwidth}\centering\strut
 -0.688\strut
-\end{minipage} & \begin{minipage}[t]{0.14\columnwidth}\centering\strut
+\end{minipage} & \begin{minipage}[t]{0.13\columnwidth}\centering\strut
 30.94\strut
-\end{minipage} & \begin{minipage}[t]{0.17\columnwidth}\centering\strut
-0.19/0.54\strut
+\end{minipage} & \begin{minipage}[t]{0.18\columnwidth}\centering\strut
+19/54\strut
 \end{minipage} & \begin{minipage}[t]{0.22\columnwidth}\centering\strut
-388.89/336.06\strut
+389/336\strut
 \end{minipage}\tabularnewline
-\begin{minipage}[t]{0.12\columnwidth}\centering\strut
+\begin{minipage}[t]{0.11\columnwidth}\centering\strut
 stan\_5k\_2\strut
 \end{minipage} & \begin{minipage}[t]{0.07\columnwidth}\centering\strut
 524\strut
-\end{minipage} & \begin{minipage}[t]{0.12\columnwidth}\centering\strut
+\end{minipage} & \begin{minipage}[t]{0.11\columnwidth}\centering\strut
 -0.685\strut
-\end{minipage} & \begin{minipage}[t]{0.14\columnwidth}\centering\strut
+\end{minipage} & \begin{minipage}[t]{0.13\columnwidth}\centering\strut
 29.94\strut
-\end{minipage} & \begin{minipage}[t]{0.17\columnwidth}\centering\strut
-0.21/0.44\strut
+\end{minipage} & \begin{minipage}[t]{0.18\columnwidth}\centering\strut
+21/44\strut
 \end{minipage} & \begin{minipage}[t]{0.22\columnwidth}\centering\strut
-399.33/622.71\strut
+399/623\strut
 \end{minipage}\tabularnewline
-\begin{minipage}[t]{0.12\columnwidth}\centering\strut
+\begin{minipage}[t]{0.11\columnwidth}\centering\strut
 sier\_3k\_1\strut
 \end{minipage} & \begin{minipage}[t]{0.07\columnwidth}\centering\strut
 764\strut
-\end{minipage} & \begin{minipage}[t]{0.12\columnwidth}\centering\strut
+\end{minipage} & \begin{minipage}[t]{0.11\columnwidth}\centering\strut
 0.871\strut
-\end{minipage} & \begin{minipage}[t]{0.14\columnwidth}\centering\strut
+\end{minipage} & \begin{minipage}[t]{0.13\columnwidth}\centering\strut
 30.42\strut
-\end{minipage} & \begin{minipage}[t]{0.17\columnwidth}\centering\strut
-0.19/0.48\strut
+\end{minipage} & \begin{minipage}[t]{0.18\columnwidth}\centering\strut
+19/48\strut
 \end{minipage} & \begin{minipage}[t]{0.22\columnwidth}\centering\strut
-651.46/850.04\strut
+651/850\strut
 \end{minipage}\tabularnewline
-\begin{minipage}[t]{0.12\columnwidth}\centering\strut
+\begin{minipage}[t]{0.11\columnwidth}\centering\strut
 sier\_3k\_2\strut
 \end{minipage} & \begin{minipage}[t]{0.07\columnwidth}\centering\strut
 768\strut
-\end{minipage} & \begin{minipage}[t]{0.12\columnwidth}\centering\strut
+\end{minipage} & \begin{minipage}[t]{0.11\columnwidth}\centering\strut
 0.898\strut
-\end{minipage} & \begin{minipage}[t]{0.14\columnwidth}\centering\strut
+\end{minipage} & \begin{minipage}[t]{0.13\columnwidth}\centering\strut
 30.05\strut
-\end{minipage} & \begin{minipage}[t]{0.17\columnwidth}\centering\strut
-0.20/0.77\strut
+\end{minipage} & \begin{minipage}[t]{0.18\columnwidth}\centering\strut
+20/77\strut
 \end{minipage} & \begin{minipage}[t]{0.22\columnwidth}\centering\strut
-438.84/153.21\strut
+439/153\strut
 \end{minipage}\tabularnewline
-\begin{minipage}[t]{0.12\columnwidth}\centering\strut
+\begin{minipage}[t]{0.11\columnwidth}\centering\strut
 sier\_3k\_3\strut
 \end{minipage} & \begin{minipage}[t]{0.07\columnwidth}\centering\strut
 773\strut
-\end{minipage} & \begin{minipage}[t]{0.12\columnwidth}\centering\strut
+\end{minipage} & \begin{minipage}[t]{0.11\columnwidth}\centering\strut
 0.932\strut
-\end{minipage} & \begin{minipage}[t]{0.14\columnwidth}\centering\strut
+\end{minipage} & \begin{minipage}[t]{0.13\columnwidth}\centering\strut
 29.77\strut
-\end{minipage} & \begin{minipage}[t]{0.17\columnwidth}\centering\strut
-0.32/0.77\strut
+\end{minipage} & \begin{minipage}[t]{0.18\columnwidth}\centering\strut
+32/77\strut
 \end{minipage} & \begin{minipage}[t]{0.22\columnwidth}\centering\strut
-511.26/459.62\strut
+511/460\strut
 \end{minipage}\tabularnewline
-\begin{minipage}[t]{0.12\columnwidth}\centering\strut
+\begin{minipage}[t]{0.11\columnwidth}\centering\strut
 sier\_4k\_1\strut
 \end{minipage} & \begin{minipage}[t]{0.07\columnwidth}\centering\strut
 841\strut
-\end{minipage} & \begin{minipage}[t]{0.12\columnwidth}\centering\strut
+\end{minipage} & \begin{minipage}[t]{0.11\columnwidth}\centering\strut
 1.38\strut
-\end{minipage} & \begin{minipage}[t]{0.14\columnwidth}\centering\strut
+\end{minipage} & \begin{minipage}[t]{0.13\columnwidth}\centering\strut
 30.43\strut
-\end{minipage} & \begin{minipage}[t]{0.17\columnwidth}\centering\strut
-0.54/0.51\strut
+\end{minipage} & \begin{minipage}[t]{0.18\columnwidth}\centering\strut
+54/51\strut
 \end{minipage} & \begin{minipage}[t]{0.22\columnwidth}\centering\strut
-576.15/538.69\strut
+576/539\strut
 \end{minipage}\tabularnewline
-\begin{minipage}[t]{0.12\columnwidth}\centering\strut
+\begin{minipage}[t]{0.11\columnwidth}\centering\strut
 sier\_4k\_2\strut
 \end{minipage} & \begin{minipage}[t]{0.07\columnwidth}\centering\strut
 764\strut
-\end{minipage} & \begin{minipage}[t]{0.12\columnwidth}\centering\strut
+\end{minipage} & \begin{minipage}[t]{0.11\columnwidth}\centering\strut
 0.877\strut
-\end{minipage} & \begin{minipage}[t]{0.14\columnwidth}\centering\strut
+\end{minipage} & \begin{minipage}[t]{0.13\columnwidth}\centering\strut
 29.3\strut
-\end{minipage} & \begin{minipage}[t]{0.17\columnwidth}\centering\strut
-0.33/0.57\strut
+\end{minipage} & \begin{minipage}[t]{0.18\columnwidth}\centering\strut
+33/57\strut
 \end{minipage} & \begin{minipage}[t]{0.22\columnwidth}\centering\strut
-499.43/854.98\strut
+499/855\strut
 \end{minipage}\tabularnewline
-\begin{minipage}[t]{0.12\columnwidth}\centering\strut
+\begin{minipage}[t]{0.11\columnwidth}\centering\strut
 sier\_4k\_3\strut
 \end{minipage} & \begin{minipage}[t]{0.07\columnwidth}\centering\strut
 688\strut
-\end{minipage} & \begin{minipage}[t]{0.12\columnwidth}\centering\strut
+\end{minipage} & \begin{minipage}[t]{0.11\columnwidth}\centering\strut
 0.383\strut
-\end{minipage} & \begin{minipage}[t]{0.14\columnwidth}\centering\strut
+\end{minipage} & \begin{minipage}[t]{0.13\columnwidth}\centering\strut
 26.39\strut
-\end{minipage} & \begin{minipage}[t]{0.17\columnwidth}\centering\strut
-0.48/0.59\strut
+\end{minipage} & \begin{minipage}[t]{0.18\columnwidth}\centering\strut
+48/59\strut
 \end{minipage} & \begin{minipage}[t]{0.22\columnwidth}\centering\strut
-454.23/499.15\strut
+454/499\strut
 \end{minipage}\tabularnewline
-\begin{minipage}[t]{0.12\columnwidth}\centering\strut
+\begin{minipage}[t]{0.11\columnwidth}\centering\strut
 sier\_5k\_1\strut
 \end{minipage} & \begin{minipage}[t]{0.07\columnwidth}\centering\strut
 722\strut
-\end{minipage} & \begin{minipage}[t]{0.12\columnwidth}\centering\strut
+\end{minipage} & \begin{minipage}[t]{0.11\columnwidth}\centering\strut
 0.599\strut
-\end{minipage} & \begin{minipage}[t]{0.14\columnwidth}\centering\strut
+\end{minipage} & \begin{minipage}[t]{0.13\columnwidth}\centering\strut
 14.59\strut
-\end{minipage} & \begin{minipage}[t]{0.17\columnwidth}\centering\strut
-0.41/0.43\strut
+\end{minipage} & \begin{minipage}[t]{0.18\columnwidth}\centering\strut
+41/43\strut
 \end{minipage} & \begin{minipage}[t]{0.22\columnwidth}\centering\strut
-631.30/716.60\strut
+631/717\strut
 \end{minipage}\tabularnewline
-\begin{minipage}[t]{0.12\columnwidth}\centering\strut
+\begin{minipage}[t]{0.11\columnwidth}\centering\strut
 sier\_5k\_2\strut
 \end{minipage} & \begin{minipage}[t]{0.07\columnwidth}\centering\strut
 710\strut
-\end{minipage} & \begin{minipage}[t]{0.12\columnwidth}\centering\strut
+\end{minipage} & \begin{minipage}[t]{0.11\columnwidth}\centering\strut
 0.523\strut
-\end{minipage} & \begin{minipage}[t]{0.14\columnwidth}\centering\strut
+\end{minipage} & \begin{minipage}[t]{0.13\columnwidth}\centering\strut
 27.53\strut
-\end{minipage} & \begin{minipage}[t]{0.17\columnwidth}\centering\strut
-0.53/0.74\strut
+\end{minipage} & \begin{minipage}[t]{0.18\columnwidth}\centering\strut
+53/74\strut
 \end{minipage} & \begin{minipage}[t]{0.22\columnwidth}\centering\strut
-477.29/454.67\strut
+477/455\strut
 \end{minipage}\tabularnewline
-\begin{minipage}[t]{0.12\columnwidth}\centering\strut
+\begin{minipage}[t]{0.11\columnwidth}\centering\strut
 sier\_5k\_3\strut
 \end{minipage} & \begin{minipage}[t]{0.07\columnwidth}\centering\strut
 779\strut
-\end{minipage} & \begin{minipage}[t]{0.12\columnwidth}\centering\strut
+\end{minipage} & \begin{minipage}[t]{0.11\columnwidth}\centering\strut
 0.968\strut
-\end{minipage} & \begin{minipage}[t]{0.14\columnwidth}\centering\strut
+\end{minipage} & \begin{minipage}[t]{0.13\columnwidth}\centering\strut
 28.93\strut
-\end{minipage} & \begin{minipage}[t]{0.17\columnwidth}\centering\strut
-0.33/0.43\strut
+\end{minipage} & \begin{minipage}[t]{0.18\columnwidth}\centering\strut
+33/43\strut
 \end{minipage} & \begin{minipage}[t]{0.22\columnwidth}\centering\strut
-569.44/484.33\strut
+569/484\strut
 \end{minipage}\tabularnewline
-\begin{minipage}[t]{0.12\columnwidth}\centering\strut
+\begin{minipage}[t]{0.11\columnwidth}\centering\strut
 sequ\_4k\_1\strut
 \end{minipage} & \begin{minipage}[t]{0.07\columnwidth}\centering\strut
 767\strut
-\end{minipage} & \begin{minipage}[t]{0.12\columnwidth}\centering\strut
+\end{minipage} & \begin{minipage}[t]{0.11\columnwidth}\centering\strut
 0.891\strut
-\end{minipage} & \begin{minipage}[t]{0.14\columnwidth}\centering\strut
+\end{minipage} & \begin{minipage}[t]{0.13\columnwidth}\centering\strut
 29.59\strut
-\end{minipage} & \begin{minipage}[t]{0.17\columnwidth}\centering\strut
-0.50/0.56\strut
+\end{minipage} & \begin{minipage}[t]{0.18\columnwidth}\centering\strut
+50/56\strut
 \end{minipage} & \begin{minipage}[t]{0.22\columnwidth}\centering\strut
-365.81/607.88\strut
+366/608\strut
 \end{minipage}\tabularnewline
-\begin{minipage}[t]{0.12\columnwidth}\centering\strut
+\begin{minipage}[t]{0.11\columnwidth}\centering\strut
 sequ\_4k\_3\strut
 \end{minipage} & \begin{minipage}[t]{0.07\columnwidth}\centering\strut
 816\strut
-\end{minipage} & \begin{minipage}[t]{0.12\columnwidth}\centering\strut
+\end{minipage} & \begin{minipage}[t]{0.11\columnwidth}\centering\strut
 1.21\strut
-\end{minipage} & \begin{minipage}[t]{0.14\columnwidth}\centering\strut
+\end{minipage} & \begin{minipage}[t]{0.13\columnwidth}\centering\strut
 29.69\strut
-\end{minipage} & \begin{minipage}[t]{0.17\columnwidth}\centering\strut
-0.35/0.71\strut
+\end{minipage} & \begin{minipage}[t]{0.18\columnwidth}\centering\strut
+35/71\strut
 \end{minipage} & \begin{minipage}[t]{0.22\columnwidth}\centering\strut
-433.35/306.41\strut
+433/306\strut
 \end{minipage}\tabularnewline
-\begin{minipage}[t]{0.12\columnwidth}\centering\strut
+\begin{minipage}[t]{0.11\columnwidth}\centering\strut
 sequ\_5k\_1\strut
 \end{minipage} & \begin{minipage}[t]{0.07\columnwidth}\centering\strut
 718\strut
-\end{minipage} & \begin{minipage}[t]{0.12\columnwidth}\centering\strut
+\end{minipage} & \begin{minipage}[t]{0.11\columnwidth}\centering\strut
 0.577\strut
-\end{minipage} & \begin{minipage}[t]{0.14\columnwidth}\centering\strut
+\end{minipage} & \begin{minipage}[t]{0.13\columnwidth}\centering\strut
 27.12\strut
-\end{minipage} & \begin{minipage}[t]{0.17\columnwidth}\centering\strut
-0.35/0.52\strut
+\end{minipage} & \begin{minipage}[t]{0.18\columnwidth}\centering\strut
+35/52\strut
 \end{minipage} & \begin{minipage}[t]{0.22\columnwidth}\centering\strut
-364.01/444.79\strut
+364/445\strut
 \end{minipage}\tabularnewline
-\begin{minipage}[t]{0.12\columnwidth}\centering\strut
+\begin{minipage}[t]{0.11\columnwidth}\centering\strut
 sequ\_5k\_2\strut
 \end{minipage} & \begin{minipage}[t]{0.07\columnwidth}\centering\strut
 587\strut
-\end{minipage} & \begin{minipage}[t]{0.12\columnwidth}\centering\strut
+\end{minipage} & \begin{minipage}[t]{0.11\columnwidth}\centering\strut
 -0.274\strut
-\end{minipage} & \begin{minipage}[t]{0.14\columnwidth}\centering\strut
+\end{minipage} & \begin{minipage}[t]{0.13\columnwidth}\centering\strut
 29.1\strut
-\end{minipage} & \begin{minipage}[t]{0.17\columnwidth}\centering\strut
-0.45/0.43\strut
+\end{minipage} & \begin{minipage}[t]{0.18\columnwidth}\centering\strut
+45/43\strut
 \end{minipage} & \begin{minipage}[t]{0.22\columnwidth}\centering\strut
-478.31/499.15\strut
+478/499\strut
 \end{minipage}\tabularnewline
-\begin{minipage}[t]{0.12\columnwidth}\centering\strut
+\begin{minipage}[t]{0.11\columnwidth}\centering\strut
 sequ\_5k\_3\strut
 \end{minipage} & \begin{minipage}[t]{0.07\columnwidth}\centering\strut
 611\strut
-\end{minipage} & \begin{minipage}[t]{0.12\columnwidth}\centering\strut
+\end{minipage} & \begin{minipage}[t]{0.11\columnwidth}\centering\strut
 -0.117\strut
-\end{minipage} & \begin{minipage}[t]{0.14\columnwidth}\centering\strut
+\end{minipage} & \begin{minipage}[t]{0.13\columnwidth}\centering\strut
 31.34\strut
-\end{minipage} & \begin{minipage}[t]{0.17\columnwidth}\centering\strut
-0.42/0.48\strut
+\end{minipage} & \begin{minipage}[t]{0.18\columnwidth}\centering\strut
+42/48\strut
 \end{minipage} & \begin{minipage}[t]{0.22\columnwidth}\centering\strut
-348.68/494.21\strut
+349/494\strut
 \end{minipage}\tabularnewline
-\begin{minipage}[t]{0.12\columnwidth}\centering\strut
+\begin{minipage}[t]{0.11\columnwidth}\centering\strut
 sequ\_6k\_1\strut
 \end{minipage} & \begin{minipage}[t]{0.07\columnwidth}\centering\strut
 731\strut
-\end{minipage} & \begin{minipage}[t]{0.12\columnwidth}\centering\strut
+\end{minipage} & \begin{minipage}[t]{0.11\columnwidth}\centering\strut
 0.657\strut
-\end{minipage} & \begin{minipage}[t]{0.14\columnwidth}\centering\strut
+\end{minipage} & \begin{minipage}[t]{0.13\columnwidth}\centering\strut
 27.78\strut
-\end{minipage} & \begin{minipage}[t]{0.17\columnwidth}\centering\strut
-0.30/0.70\strut
+\end{minipage} & \begin{minipage}[t]{0.18\columnwidth}\centering\strut
+30/70\strut
 \end{minipage} & \begin{minipage}[t]{0.22\columnwidth}\centering\strut
-433.43/360.77\strut
+433/361\strut
 \end{minipage}\tabularnewline
-\begin{minipage}[t]{0.12\columnwidth}\centering\strut
+\begin{minipage}[t]{0.11\columnwidth}\centering\strut
 sequ\_6k\_2\strut
 \end{minipage} & \begin{minipage}[t]{0.07\columnwidth}\centering\strut
 690\strut
-\end{minipage} & \begin{minipage}[t]{0.12\columnwidth}\centering\strut
+\end{minipage} & \begin{minipage}[t]{0.11\columnwidth}\centering\strut
 0.39\strut
-\end{minipage} & \begin{minipage}[t]{0.14\columnwidth}\centering\strut
+\end{minipage} & \begin{minipage}[t]{0.13\columnwidth}\centering\strut
 11.83\strut
-\end{minipage} & \begin{minipage}[t]{0.17\columnwidth}\centering\strut
-0.26/0.43\strut
+\end{minipage} & \begin{minipage}[t]{0.18\columnwidth}\centering\strut
+26/43\strut
 \end{minipage} & \begin{minipage}[t]{0.22\columnwidth}\centering\strut
-699.04/934.06\strut
+699/934\strut
 \end{minipage}\tabularnewline
-\begin{minipage}[t]{0.12\columnwidth}\centering\strut
+\begin{minipage}[t]{0.11\columnwidth}\centering\strut
 sequ\_6k\_3\strut
 \end{minipage} & \begin{minipage}[t]{0.07\columnwidth}\centering\strut
 603\strut
-\end{minipage} & \begin{minipage}[t]{0.12\columnwidth}\centering\strut
+\end{minipage} & \begin{minipage}[t]{0.11\columnwidth}\centering\strut
 -0.174\strut
-\end{minipage} & \begin{minipage}[t]{0.14\columnwidth}\centering\strut
+\end{minipage} & \begin{minipage}[t]{0.13\columnwidth}\centering\strut
 26.51\strut
-\end{minipage} & \begin{minipage}[t]{0.17\columnwidth}\centering\strut
-0.36/0.32\strut
+\end{minipage} & \begin{minipage}[t]{0.18\columnwidth}\centering\strut
+36/32\strut
 \end{minipage} & \begin{minipage}[t]{0.22\columnwidth}\centering\strut
-535.54/691.89\strut
+536/692\strut
 \end{minipage}\tabularnewline
 \bottomrule
 \end{longtable}
@@ -1627,18 +1628,20 @@ ponderosa pine 0.7 standard deviations below the mean.}
 
 \subsection{Discussion}\label{discussion}
 
-We used a small, unhumanned aerial system to measure components of
-complex forest structure across a broad environmental gradient of
-climatic water deficit in yellow pine/mixed-conifer forests of the
-Sierra Nevada, California heavily disturbed by the western pine beetle.
-By collecting individual tree-level data for \textasciitilde{}30
-hectares at each of 32 sites along the environmental gradient, we were
-able to simultaneously consider how local-scale forest structure (tree
-size, tree host/non-host composition, and tree density) interacted with
-broad-scale climate conditions to drive the probability of host tree
-(ponderosa pine) mortality, while also accounting for spatial
-aggregation of mortality arising from bark beetle host selection
-behavior.
+We found that host tree density is a dominant driver of host mortality
+during elevated levels of bark beetle activity, likely due to energy
+costs associated with beetles navigating forests with many non-hosts
+available. We also found that, even within a single forest insect/tree
+species pairing, in the same extreme drought, and conditional upon high
+levels of western pine beetle activity, host tree size may still
+strongly affect insect-induced tree mortality in different ways
+depending on background environmental conditions of water stress. We
+suggest that this may indicate different stages of bark beetle
+disturbance throughout the Sierra yellow pine/mixed-conifer system, with
+``outbreak'' thresholds surpassed at the hottest, driest sites where
+larger trees led to more likely host mortality, but not yet surpassed in
+cooler, wetter sites, where smaller trees led to more likely host
+mortality.
 
 \subsection{Broad-scale environmental
 condition}\label{broad-scale-environmental-condition}
@@ -1660,12 +1663,6 @@ al. 2019).
 \subsection{\texorpdfstring{Strength of support for different ``density
 increases mortality''
 hypotheses}{Strength of support for different density increases mortality hypotheses}}\label{strength-of-support-for-different-density-increases-mortality-hypotheses}
-
-We modeled the effect of overall (i.e., all tree species included) tree
-size and density as well as host (i.e.~ponderosa pine) tree size and
-density on the probability of host tree mortality in order to gain
-insights about the relative influence of different facets of complex
-forest structure.
 
 The strongest effect on the probability of host mortality was the local
 host density within each 20m x 20m cell. Host availability has been
@@ -1770,15 +1767,15 @@ sites but such an alignment was not present in the cooler, wetter sites
 \subsection{Limitations and future
 directions}\label{limitations-and-future-directions}
 
-We have demonstrated that small, unhummaned aerial systems (sUAS) can be
-effective means of collecting data at multiple, vastly different spatial
-scales to investigate a single, multi-scale phenomenon-- from meters in
-between trees, to hundreds of meters of elevation, to hundreds of
-thousands of meters of latitude. However, some limitations remain but
-could perhaps be overcome with further refinements in the use of this
-tool for forest ecology. Most of these limitations arise from tree
-detection and classification uncertainty, and thus it was imperative to
-work with field data for calibration and uncertainty reporting.
+We have demonstrated that drones can be effective means of collecting
+data at multiple, vastly different spatial scales to investigate a
+single, multi-scale phenomenon-- from meters in between trees, to
+hundreds of meters of elevation, to hundreds of thousands of meters of
+latitude. However, some limitations remain but could perhaps be overcome
+with further refinements in the use of this tool for forest ecology.
+Most of these limitations arise from tree detection and classification
+uncertainty, and thus it was imperative to work with field data for
+calibration and uncertainty reporting.
 
 The greatest limitation in our study arising from classification
 uncertainty is in the assumption that all dead trees were ponderosa
@@ -1822,30 +1819,17 @@ to restore forest resilience (North et al. 2015, Young et al. 2017), but
 understanding the optimal complex forest structure that can enable dry
 western U.S. forests to persist through disturbances such as insect
 attack will be vital for predicting how California forests may respond
-to these interventions. We've shown that small, unhumanned aerial
-systems can be a valuable tool for investigating how this complexity in
-forest structure combines with environmental conditions to shape forest
-insect disturbance. We found that host tree density is a dominant driver
-of host mortality, likely due to energy costs associated with beetles
-navigating forests with many non-hosts available. We also showed that,
-even within a single forest insect/tree species pairing, in the same
-extreme drought, and conditional upon high levels of western pine beetle
-activity, host tree size may still strongly affect insect-induced tree
-mortality in different ways depending on background environmental
-conditions of water stress. We suggest that this may indicate different
-stages of bark beetle disturbance throughout the Sierra yellow
-pine/mixed-conifer system, with ``outbreak'' thresholds surpassed at the
-hottest, driest sites where larger trees led to more likely host
-mortality, but not yet surpassed in cooler, wetter sites, where smaller
-trees led to more likely host mortality.
+to these interventions. We've shown that drones can be a valuable tool
+for investigating how this complexity in forest structure combines with
+environmental conditions to shape forest insect disturbance.
 
-Thus, we echo the conclusions of other researchers in that management
-interventions to reduce the severity of bark beetle disturbance severity
-will benefit from generally reducing tree density in this system (Young
-et al. 2017), but also that outcomes will be largely dependent on
-whether the disturbance dynamic has crossed various feedback thresholds
-(Raffa et al. 2008), which may be ascertained by recent advances in
-disturbance forecasting (Preisler et al. 2017).
+Our results support conclusions of other researchers that management
+interventions to reduce the severity of bark beetle disturbance will
+benefit from generally reducing tree density (Young et al. 2017).
+However, in addition, our study suggests that outcomes will depend on
+whether the disturbance dynamic has crossed endemic to outbreak feedback
+thresholds (Raffa et al. 2008), which may be predicted by recent
+advances in disturbance forecasting (Preisler et al. 2017).
 
 \subsection{Acknowledgements}\label{acknowledgements}
 
